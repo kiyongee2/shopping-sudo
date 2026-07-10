@@ -150,7 +150,7 @@
 }
 .add-product label{
   width: 70px;
-  flex-shrink: 0; // 라벨의 너비 고정
+  flex-shrink: 0; /* 라벨의 너비 고정 */
   padding-top: 8px;
   font-size: 16px;
   color: #444;
@@ -210,7 +210,7 @@
 }
 .signin label{
   width: 70px;
-  flex-shrink: 0; // 라벨의 너비 고정
+  flex-shrink: 0; /* 라벨의 너비 고정 */
   padding-top: 8px;
   font-size: 16px;
   color: #444;
@@ -266,7 +266,7 @@
 }
 .signup label{
   width: 110px;
-  flex-shrink: 0; // 라벨의 너비 고정
+  flex-shrink: 0; /* 라벨의 너비 고정 */
   padding-top: 8px;
   font-size: 16px;
   color: #444;
