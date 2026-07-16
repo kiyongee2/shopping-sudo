@@ -1,3 +1,6 @@
+/*  안전한 반응형 동작을 보장하기 위해 전역 규칙으로 추가 */
+/*  부모보다 이미지가 크면 부모 너비에 맞춰 축소되고, 
+    작으면 원본 크기 그대로 유지.*/
 img{
   max-width: 100%;
   height: auto;
@@ -50,27 +53,6 @@ img{
 .notice-popup button:hover{
   background-color: #c2185b;
 }
-@media (max-width: 768px){
-  .notice-popup{
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    width: 80%;
-  }
-}
-@media (max-width: 480px){
-  .notice-popup{
-    top: 12px;
-    width: 90%;
-    padding: 16px;
-  }
-  .notice-popup h3{
-    font-size: 18px;
-  }
-  .notice-popup p{
-    font-size: 14px;
-  }
-}
 
 /* Header 스타일 */
 .header{
@@ -111,6 +93,22 @@ img{
   margin: 20px auto;
 }
 .product-list h2{margin-bottom: 20px;}
+.search-area{
+  margin-bottom: 20px;
+}
+.search-area input{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.no-result{
+  padding: 40px 0;
+  color: #777;
+  text-align: center;
+}
 .card-container{
   display: flex;
   flex-wrap: wrap;
@@ -386,7 +384,14 @@ img{
 }
 
 /* 반응형 스타일 */
+/* 768px 이하 */
 @media (max-width: 768px){
+  .notice-popup{
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 80%;
+  }
   .header nav{
     display: flex;
     flex-wrap: wrap;
@@ -431,7 +436,19 @@ img{
   }
 }
 
+/* 480px 이하 */
 @media (max-width: 480px){
+  .notice-popup{
+    top: 12px;
+    width: 90%;
+    padding: 16px;
+  }
+  .notice-popup h3{
+    font-size: 18px;
+  }
+  .notice-popup p{
+    font-size: 14px;
+  }
   .header a{
     margin: 0 8px;
   }
